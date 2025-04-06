@@ -11,7 +11,7 @@
 define('DB_HOST', getenv('localhost'));
 define('DB_NAME', getenv('doodlesense'));
 define('DB_USER', getenv('root'));
-define('DB_PASS', getenv('Abcd@123'));
+define('DB_PASS', getenv('Pass@2025'));
 define('DB_PORT', getenv('3306'));
 define('DB_TYPE', 'mysql');
 
@@ -39,7 +39,7 @@ define('MAX_UPLOAD_SIZE', 5242880); // 5MB in bytes
 define('ALLOWED_EXTENSIONS', ['jpg', 'jpeg', 'png', 'gif', 'svg']);
 
 // Gemini API Settings
-define('GEMINI_API_KEY', getenv('AIzaSyA8o7cHAtM8CMG-ilry804CFWM8Iy9Mb2U') ?: ''); // Get from environment variable
+define('GEMINI_API_KEY', getenv('YOUR-GEMINI-API-KEY') ?: ''); // Get from environment variable
 
 // User registration settings
 define('VERIFY_EMAIL', true); // Set to true to require email verification

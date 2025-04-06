@@ -7,7 +7,7 @@ include 'includes/auth.php';
 
 // Redirect if already logged in
 if(isset($_SESSION['user_id'])) {
-    header("Location: dashboard.php");
+    header("Location: drawing_board.php");
     exit();
 }
 

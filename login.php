@@ -8,7 +8,7 @@ $db = Database::getInstance();
 
 // Check if user is already logged in
 if (isset($_SESSION['user_id'])) {
-    header("Location: dashboard.php");
+    header("Location: drawing_board.php");
     exit();
 }
 
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
                 
                 // Redirect to dashboard
-                header("Location: dashboard.php");
+                header("Location: drawing_board.php");
                 exit();
             } else {
                 $error = 'Invalid email or password';
@@ -102,7 +102,7 @@ if (isset($_COOKIE['remember_token']) && empty($_SESSION['user_id'])) {
             [':id' => $user['id']]
         );
         
-        header("Location: dashboard.php");
+        header("Location: drawing_board.php");
         exit();
     }
 }
@@ -164,7 +164,7 @@ if (isset($_COOKIE['remember_token']) && empty($_SESSION['user_id'])) {
                 <button type="submit" class="btn-primary">Sign In</button>
                 
                 <div class="auth-footer">
-                    <p>Don't have an account? <a href="register.php">Sign up</a></p>
+                    <p>Don't have an account? <a href="signup.php">Sign up</a></p>
                 </div>
             </form>
         </div>

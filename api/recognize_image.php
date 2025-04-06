@@ -57,16 +57,16 @@ if (count($parts) !== 2) {
 $base64_image = $parts[1];
 
 // Check if Gemini API key is available
-// if (empty(GEMINI_API_KEY)) {
-//     echo json_encode([
-//         'success' => false,
-//         'message' => 'API key not configured'
-//     ]);
-//     exit;
-// }
+if (empty(GEMINI_API_KEY)) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'API key not configured'
+    ]);
+    exit;
+}
 
 // Prepare the API request
-$apiKey = "AIzaSyA8o7cHAtM8CMG-ilry804CFWM8Iy9Mb2U";
+$apiKey = GEMINI_API_KEY;
 $endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" . $apiKey;
 
 // Prepare the request data

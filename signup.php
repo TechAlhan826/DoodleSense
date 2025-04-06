@@ -7,7 +7,7 @@ class Database {
     
     public function __construct() {
         try {
-            $this->conn = new PDO("mysql:host=".DB_HOST.";dbname=doodlesense", "root", "Abcd@123");
+            $this->conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME."", DB_USER, DB_PASS);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $e) {
             die("Connection failed: " . $e->getMessage());
@@ -180,14 +180,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">Password*</label>
+                    <label for="password">Password</label>
                     <div class="input-with-icon">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="password" name="password" placeholder="Create a password" required>
                     </div>
-                    <div class="password-strength">
-                        <div class="password-strength-bar" id="password-strength-bar"></div>
-                    </div>
+                    <div class="password-strength" id="password-strength"></div>
                 </div>
                 
                 <div class="form-group">

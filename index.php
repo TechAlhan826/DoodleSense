@@ -37,7 +37,7 @@ $isLoggedIn = $auth->isLoggedIn();
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#about">About</a></li>
                     <?php if ($isLoggedIn): ?>
-                        <li><a href="dashboard.php" class="btn btn-primary">Dashboard</a></li>
+                        <li><a href="drawing_board.php" class="btn btn-primary">Dashboard</a></li>
                         <li><a href="logout.php" class="btn btn-outline">Log Out</a></li>
                     <?php else: ?>
                         <li><a href="login.php" class="btn btn-outline">Login</a></li>
@@ -64,7 +64,7 @@ $isLoggedIn = $auth->isLoggedIn();
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1607350215478-b770b8095a20?q=80&w=1470&auto=format&fit=crop" alt="Drawing on DoodleSense AI">
+                <img src="preview.png" alt="Drawing on DoodleSense AI">
             </div>
         </div>
     </section>
@@ -156,6 +156,17 @@ $isLoggedIn = $auth->isLoggedIn();
             </div>
         </div>
     </section>
+
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14.5px; color: #333; padding: 20px 0;">
+  <p><strong>DoodleSense</strong> – proudly crafted by:</p>
+  <ul style="list-style-type: disc; margin-left: 20px;">
+    <li><strong>Mohammed Alhan N</strong> (23BCA0173)</li>
+    <li><strong>Santhosh Kumar J</strong> (23BCA0040)</li>
+    <li><strong>Vimal Kumar N</strong> (23BCA0169)</li>
+  </ul>
+</div>
+
+
 
     <footer class="footer">
         <div class="container">
